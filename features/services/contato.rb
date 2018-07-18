@@ -1,7 +1,8 @@
 class ContatoApi
     include HTTParty
 
-    base_uri 'http://localhost:3090/api/v1'
+    base_uri ENV['BASE_URL']
+    
     format :json
     headers 'Content-Type' => 'application/json', 
             'User-agent' => 'tdc_user'
